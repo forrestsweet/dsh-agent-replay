@@ -28,7 +28,7 @@ dsh web
 
 1. Keep each pull request focused on one change.
 2. Add or update tests for privacy and data-selection behavior.
-3. Update both `README.md` and `README.zh-CN.md` when user-facing documentation changes.
+3. Update both `README.md` and `README.en.md` when user-facing documentation changes.
 4. Run `pnpm check` and `npm pack --dry-run --ignore-scripts`.
 5. Describe how you verified the change.
 

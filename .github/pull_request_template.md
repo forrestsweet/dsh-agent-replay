@@ -7,7 +7,7 @@
 - [ ] `pnpm check`
 - [ ] `npm pack --dry-run --ignore-scripts`
 - [ ] Tested against a real, privacy-safe Harness session when UI behavior changed
-- [ ] Updated both English and Chinese docs when user-facing documentation changed
+- [ ] Updated both Chinese and English docs when user-facing documentation changed
 - [ ] Added a changelog entry when appropriate
 
 ## Privacy and UI

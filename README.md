@@ -1,9 +1,9 @@
-# Agent Replay for DeepSeek Harness
+# DeepSeek Harness Agent Replay
 
-English | [简体中文](README.zh-CN.md)
+[English](README.en.md) | 简体中文
 
 <p align="center">
-  <img src="docs/assets/hero.svg" alt="Agent Replay turns a Harness session into a replay and redacted standalone HTML" width="100%" />
+  <img src="docs/assets/hero.zh-CN.svg" alt="Agent Replay 将 Harness 会话转换为可回放时间线和脱敏的独立 HTML" width="100%" />
 </p>
 
 <p align="center">
@@ -13,47 +13,47 @@ English | [简体中文](README.zh-CN.md)
   <a href="https://github.com/topics/dsh-plugin"><img alt="DeepSeek Harness plugin" src="https://img.shields.io/badge/DeepSeek_Harness-plugin-4176e6?style=flat-square" /></a>
 </p>
 
-**Replay what an agent actually did, then export a safer version to share.** Agent Replay adds a native **Replay** tab to DeepSeek Harness. It turns real session messages, model responses, tool calls, commands, errors, and timing into a searchable timeline and a standalone HTML replay.
+**回放 Agent 真正做过的事情，再导出一个更适合分享的版本。** Agent Replay 为 DeepSeek Harness 增加原生的 **回放** 标签页，把真实会话中的消息、模型回复、工具调用、命令、错误和耗时转换为可搜索时间线，并可导出为独立 HTML 回放。
 
-## See it in 10 seconds
+## 10 秒看懂
 
-| Replay the real session | Prepare a share-safe export |
+| 回放真实会话 | 生成适合分享的脱敏版本 |
 | --- | --- |
-| ![Replay tab inside DeepSeek Harness](docs/assets/replay.png) | ![Share page with privacy summary and HTML export](docs/assets/share.png) |
+| ![DeepSeek Harness 中的回放标签页](docs/assets/replay.png) | ![带隐私摘要和 HTML 导出的分享页](docs/assets/share.png) |
 
-1. Open any non-empty Harness session and select **Replay**.
-2. Search, filter, inspect, or play events with their recorded timing.
-3. Select **Create share page** and export one interactive `.html` file.
+1. 打开任意非空 Harness 会话，选择 **回放**。
+2. 搜索、筛选、检查事件，或按记录时间播放。
+3. 选择 **生成分享页**，导出一个可交互的 `.html` 文件。
 
-## Why this exists
+## 为什么需要它
 
-Harness already ships **Trajectory**, an excellent developer diagnostics surface. Agent Replay complements it instead of replacing it:
+Harness 已经内置了很优秀的开发诊断界面 **Trajectory（轨迹）**。Agent Replay 不替代它，而是补齐分享与沟通这一层：
 
 | | Harness Trajectory | Agent Replay |
 | --- | --- | --- |
-| Primary job | Inspect and debug the complete event ledger | Replay and communicate a session |
-| Audience | Agent developers | Teammates, maintainers, docs readers |
-| Data | Raw requests, usage, timing, event detail | Selected messages, tools, commands, errors, timing |
-| Sharing | In-product diagnosis | Redacted, standalone interactive HTML |
-| Privacy boundary | Full local diagnostic context | System events excluded; common paths and secrets redacted |
+| 主要目标 | 检查和调试完整事件账本 | 回放并讲清楚一次会话 |
+| 主要读者 | Agent 开发者 | 团队成员、维护者、文档读者 |
+| 数据 | 原始请求、用量、耗时和事件细节 | 经过选择的消息、工具、命令、错误和耗时 |
+| 分享方式 | 产品内诊断 | 脱敏、独立、可交互 HTML |
+| 隐私边界 | 完整本地诊断上下文 | 排除系统事件；脱敏常见路径和密钥 |
 
-## Features
+## 功能
 
-- Native session-scoped `conversation.view` tab
-- Real Harness snapshot data, including messages, tools, commands, errors, timestamps, and durations
-- Recorded-time playback at 1×, 2×, or 4×
-- Event search, type filters, detail inspection, copy, and older-history loading
-- Standalone HTML export with a Trajectory-like ledger, overview lanes, inspector, dark mode, and no runtime dependency
-- Share selection that excludes system/context events and assistant reasoning
-- Built-in redaction for macOS/Windows user paths, common token shapes, bearer tokens, and key/value credentials
-- English and Chinese UI, following the active Harness locale
-- Official Harness primitives, semantic tokens, dimensions, hover states, icons, and light/dark behavior
+- 原生、会话级 `conversation.view` 标签页
+- 完全使用 Harness 真实快照：消息、工具、命令、错误、时间戳与耗时
+- 1×、2×、4× 记录时间回放
+- 搜索、类型筛选、详情检查、复制和加载更早历史
+- 独立 HTML 导出：Trajectory 风格事件账本、概览轨道、详情检查器、深色模式，无运行时依赖
+- 分享时排除系统/上下文事件与助手隐藏推理
+- 自动脱敏 macOS/Windows 用户路径、常见 Token、Bearer Token 和键值型凭据
+- 中英文 UI，跟随 Harness 当前语言
+- 复用 Harness 官方组件、语义 Token、尺寸、交互状态、图标与明暗色行为
 
-## Install
+## 安装
 
-### From source
+### 从源码安装
 
-Requirements: Node.js `22.19+` (or `24+`), pnpm, and a working [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) installation.
+要求：Node.js `22.19+`（或 `24+`）、pnpm，以及可正常运行的 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)。
 
 ```bash
 git clone https://github.com/forrestsweet/dsh-agent-replay.git
@@ -64,36 +64,36 @@ dsh plugin --profile web add .
 dsh web
 ```
 
-Open a non-empty session and select **Replay** beside Chat and Trajectory.
+打开非空会话，在「对话」和「轨迹」旁选择 **回放**。
 
-### Directly from GitHub
+### 直接从 GitHub 安装
 
 ```bash
 dsh plugin --profile web add github:forrestsweet/dsh-agent-replay
 ```
 
-Git dependencies run this repository's `prepare` build. pnpm 10 may ask you to allow the package build in the profile's `pnpm-workspace.yaml`; review the source, allow `dsh-agent-replay`, and rerun the command. Pin a commit SHA when reproducibility matters. See the official [Harness publishing guide](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/develop/basic/publish.md#installing-from-github-the-build-script-catch).
+Git 依赖会执行本仓库的 `prepare` 构建。pnpm 10 可能要求在 profile 的 `pnpm-workspace.yaml` 中明确允许该包构建；请先检查源码，再允许 `dsh-agent-replay` 并重新运行命令。对可复现性有要求时，请固定 commit SHA。细节见 Harness 官方[插件发布指南](https://github.com/deepseek-ai/deepseek-harness/blob/master/docs/user/develop/basic/publish.zh.md#从-github-安装构建脚本这道坎)。
 
-### Remove
+### 移除
 
 ```bash
 dsh plugin --profile web remove dsh-agent-replay
 ```
 
-## Privacy model
+## 隐私模型
 
-Agent Replay runs in the Harness web client and reads the session snapshot already available there. It does not upload session content and does not require another model key.
+Agent Replay 运行在 Harness Web 客户端中，只读取浏览器里已经存在的会话快照，不上传会话内容，也不需要额外模型密钥。
 
-Before HTML export it:
+导出 HTML 前会：
 
-- excludes system/context events and live/incomplete events;
-- exports the assistant's final text instead of hidden reasoning;
-- replaces `/Users/<name>` and `C:\\Users\\<name>` prefixes;
-- redacts common GitHub/OpenAI/Slack-style tokens, bearer tokens, and credential assignments.
+- 排除系统/上下文事件以及尚未完成的实时事件；
+- 只导出助手最终文本，不导出隐藏推理；
+- 替换 `/Users/<name>` 和 `C:\\Users\\<name>` 路径前缀；
+- 脱敏常见 GitHub/OpenAI/Slack 形式的 Token、Bearer Token 和凭据赋值。
 
-Redaction is a safety net, not a guarantee. Always review an exported replay before publishing it. If you find a bypass, please follow [SECURITY.md](SECURITY.md) instead of opening a public issue.
+自动脱敏是安全网，不是绝对保证。公开发布前请人工检查导出文件。若发现脱敏绕过，请按 [SECURITY.md](SECURITY.md) 私下报告，不要创建公开 Issue。
 
-## Development
+## 开发
 
 ```bash
 pnpm install
@@ -103,21 +103,21 @@ pnpm build
 npm pack --dry-run --ignore-scripts
 ```
 
-The plugin has two entry points:
+项目结构：
 
-- `src/index.ts` is the Harness host bundle entry.
-- `src/client/index.tsx` registers the Replay view and renders session data.
-- `src/privacy.ts` owns independently tested public-event selection and redaction.
-- `cordis.patch.yml` composes the plugin into a Harness profile.
+- `src/index.ts`：Harness 宿主端 bundle 入口。
+- `src/client/index.tsx`：注册回放视图并渲染会话数据。
+- `src/privacy.ts`：经过独立测试的公开事件选择与脱敏逻辑。
+- `cordis.patch.yml`：将插件组合进 Harness profile。
 
-The UI deliberately follows `ui-trajectory` and `ui-primitives` from DeepSeek Harness. Contributions should reuse Harness primitives and `--dsw-*` semantic tokens rather than introduce a separate visual system.
+UI 明确跟随 DeepSeek Harness 的 `ui-trajectory` 与 `ui-primitives`。贡献代码应优先复用 Harness 官方组件和 `--dsw-*` 语义 Token，不另造一套视觉系统。
 
-## Compatibility
+## 兼容性
 
-The current release targets DeepSeek Harness `0.1.0-rc.5+` and is tested against `0.1.0-rc.6` development packages. Harness is pre-1.0, so client slot or snapshot contracts may change. Open a compatibility issue with both versions when reporting a regression.
+当前版本面向 DeepSeek Harness `0.1.0-rc.5+`，并使用 `0.1.0-rc.6` 开发依赖验证。Harness 仍处于 1.0 之前，客户端 slot 或快照契约可能变化。兼容问题请同时提供 Harness 与插件版本。
 
-Issues and pull requests are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md), and see [CHANGELOG.md](CHANGELOG.md) for release history.
+欢迎提交 Issue 和 PR。请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)，版本记录见 [CHANGELOG.md](CHANGELOG.md)。
 
-## License
+## 许可证
 
 [MIT](LICENSE) © Agent Replay contributors.
