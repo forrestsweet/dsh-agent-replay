@@ -1,0 +1,91 @@
+{
+  "name": "dsh-agent-replay",
+  "version": "0.1.0",
+  "packageManager": "pnpm@11.7.0",
+  "description": "Replay and share redacted DeepSeek Harness sessions as standalone HTML",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/client.js",
+    "lib/client.js.map",
+    "cordis.patch.yml",
+    "README.md",
+    "README.zh-CN.md",
+    "CHANGELOG.md",
+    "SECURITY.md",
+    "docs/assets/*"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ],
+      "platform": "web"
+    }
+  },
+  "scripts": {
+    "build": "tsdown",
+    "prepare": "pnpm build",
+    "typecheck": "tsc -p tsconfig.client.json --noEmit",
+    "test": "pnpm build && node --test tests/*.test.mjs",
+    "check": "pnpm typecheck && pnpm test"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "ai-agents",
+    "agent-replay",
+    "observability",
+    "session-replay",
+    "developer-tools",
+    "typescript"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/forrestsweet/dsh-agent-replay.git"
+  },
+  "homepage": "https://github.com/forrestsweet/dsh-agent-replay#readme",
+  "bugs": {
+    "url": "https://github.com/forrestsweet/dsh-agent-replay/issues"
+  },
+  "author": "forrestsweet",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.5",
+    "@deepseek-ai/dsh-client-ui-layout": "^0.1.0-rc.5",
+    "@deepseek-ai/dsh-client-ui-conversation": "^0.1.0-rc.5",
+    "@deepseek-ai/dsh-client-ui-primitives": "^0.1.0-rc.5",
+    "@deepseek-ai/dsh-client-ui-slots": "^0.1.0-rc.5",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "0.1.0-rc.6",
+    "@deepseek-ai/dsh-client-ui-layout": "0.1.0-rc.6",
+    "@deepseek-ai/dsh-client-ui-conversation": "0.1.0-rc.6",
+    "@deepseek-ai/dsh-client-ui-primitives": "0.1.0-rc.6",
+    "@deepseek-ai/dsh-client-ui-slots": "0.1.0-rc.6",
+    "@types/react": "~18.3.1",
+    "react": "^18.2.0",
+    "tsdown": "^0.16.0",
+    "typescript": "^5.9.2"
+  }
+}

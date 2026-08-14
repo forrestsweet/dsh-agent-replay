@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Agent Replay for DeepSeek Harness</title>
+  <desc id="desc">A Harness session becomes a replay timeline and a redacted standalone HTML page.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0" stop-color="#fafbfc"/>
+      <stop offset="1" stop-color="#f3f5f7"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-15%" width="120%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#111827" flood-opacity=".08"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="360" rx="22" fill="url(#bg)"/>
+  <g transform="translate(68 56)">
+    <text x="0" y="30" fill="#111318" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="34" font-weight="650">Agent Replay</text>
+    <text x="0" y="62" fill="#61666b" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="17">Replay real DeepSeek Harness sessions. Share only what is safe.</text>
+    <g transform="translate(0 102)" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif">
+      <rect width="238" height="126" rx="8" fill="#fff" stroke="#dfe2e6"/>
+      <text x="18" y="28" fill="#81858c" font-size="12">HARNESS SESSION</text>
+      <circle cx="22" cy="54" r="4" fill="#4176e6"/><rect x="34" y="50" width="166" height="8" rx="4" fill="#d7dbe0"/>
+      <circle cx="22" cy="78" r="4" fill="#dd8629"/><rect x="34" y="74" width="124" height="8" rx="4" fill="#d7dbe0"/>
+      <circle cx="22" cy="102" r="4" fill="#4176e6"/><rect x="34" y="98" width="184" height="8" rx="4" fill="#d7dbe0"/>
+      <path d="M258 63h43m-9-9 9 9-9 9" fill="none" stroke="#adb2b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="321" width="238" height="126" rx="8" fill="#fff" stroke="#dfe2e6"/>
+      <text x="339" y="28" fill="#81858c" font-size="12">REPLAY</text>
+      <rect x="339" y="45" width="202" height="1" fill="#e6e8eb"/>
+      <rect x="339" y="58" width="4" height="13" rx="2" fill="#4176e6"/><rect x="351" y="60" width="142" height="8" rx="4" fill="#d7dbe0"/>
+      <rect x="339" y="81" width="4" height="9" rx="2" fill="#dd8629"/><rect x="351" y="82" width="174" height="8" rx="4" fill="#d7dbe0"/>
+      <rect x="339" y="102" width="4" height="13" rx="2" fill="#4176e6"/><rect x="351" y="104" width="116" height="8" rx="4" fill="#d7dbe0"/>
+      <path d="M579 63h43m-9-9 9 9-9 9" fill="none" stroke="#adb2b8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="642" width="238" height="126" rx="8" fill="#fff" stroke="#dfe2e6"/>
+      <text x="660" y="28" fill="#81858c" font-size="12">REDACTED HTML</text>
+      <path d="M660 51h26l8 8v42h-34z" fill="#f5f6f7" stroke="#adb2b8"/>
+      <path d="M686 51v8h8" fill="none" stroke="#adb2b8"/>
+      <text x="708" y="68" fill="#111318" font-size="14" font-weight="600">Standalone replay</text>
+      <text x="708" y="91" fill="#61666b" font-size="12">Docs · demos · bug reports</text>
+      <text x="708" y="110" fill="#2f7d4a" font-size="12">System context excluded</text>
+    </g>
+  </g>
+  <g transform="translate(966 42)" filter="url(#shadow)">
+    <rect width="164" height="28" rx="6" fill="#fff" stroke="#dfe2e6"/>
+    <circle cx="16" cy="14" r="4" fill="#2f9e62"/>
+    <text x="29" y="18" fill="#61666b" font-family="Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="11">local-first · no upload</text>
+  </g>
+</svg>

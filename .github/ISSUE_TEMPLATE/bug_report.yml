@@ -1,0 +1,70 @@
+name: Bug report
+description: Report a reproducible Agent Replay problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Do not paste private session data or secrets. Security issues belong in a private advisory."
+  - type: input
+    id: replay-version
+    attributes:
+      label: Agent Replay version
+      placeholder: 0.1.0 or commit SHA
+    validations:
+      required: true
+  - type: input
+    id: harness-version
+    attributes:
+      label: DeepSeek Harness version
+      placeholder: 0.1.0-rc.6 or commit SHA
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Replay timeline
+        - Playback
+        - Search or filters
+        - Share page
+        - HTML export
+        - Installation or build
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use synthetic or redacted data only.
+      placeholder: "1. Open…\n2. Select…\n3. Observe…"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: OS, browser, Node.js, pnpm
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Safety check
+      options:
+        - label: I removed private paths, credentials, and session content from this report.
+          required: true
+        - label: This is not a security vulnerability or redaction bypass.
+          required: true

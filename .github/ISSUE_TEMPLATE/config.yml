@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report
+    url: https://github.com/forrestsweet/dsh-agent-replay/security/advisories/new
+    about: Privately report redaction bypasses or data exposure.
+  - name: DeepSeek Harness Discussions
+    url: https://github.com/deepseek-ai/deepseek-harness/discussions
+    about: Ask questions about Harness itself or community plugin discovery.
