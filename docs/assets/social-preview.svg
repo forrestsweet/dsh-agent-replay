@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">DeepSeek Harness Replay</title>
+  <desc id="desc">DeepSeek Harness 会话回放与脱敏分享插件。</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#f2f4f7"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f5f6f8" stop-opacity=".98"/>
+      <stop offset="1" stop-color="#f5f6f8" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="panel-shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#111827" flood-opacity=".16"/>
+    </filter>
+    <clipPath id="panel-clip">
+      <rect x="538" y="74" width="846" height="476" rx="14"/>
+    </clipPath>
+  </defs>
+
+  <rect width="1280" height="640" fill="url(#background)"/>
+  <path d="M0 0h1280v8H0z" fill="#4176e6"/>
+  <circle cx="1180" cy="70" r="150" fill="#4176e6" opacity=".035"/>
+  <circle cx="1100" cy="570" r="230" fill="#4176e6" opacity=".025"/>
+
+  <g filter="url(#panel-shadow)" clip-path="url(#panel-clip)">
+    <rect x="538" y="74" width="846" height="476" rx="14" fill="#fff"/>
+    <image href="replay.png" x="538" y="74" width="846" height="476" preserveAspectRatio="xMidYMid slice"/>
+  </g>
+  <rect x="538" y="74" width="846" height="476" rx="14" fill="none" stroke="#d9dde3"/>
+  <rect x="440" y="8" width="300" height="632" fill="url(#fade)"/>
+
+  <g font-family="Inter,-apple-system,BlinkMacSystemFont,'PingFang SC','Microsoft YaHei',sans-serif">
+    <g transform="translate(72 74)">
+      <rect width="210" height="32" rx="7" fill="#ffffff" stroke="#d9dde3"/>
+      <circle cx="18" cy="16" r="5" fill="#2f9e62"/>
+      <text x="32" y="21" fill="#61666b" font-size="13" font-weight="600">DEEPSEEK HARNESS 插件</text>
+    </g>
+
+    <text x="72" y="190" fill="#111318" font-size="49" font-weight="720" letter-spacing="-1.5">Harness Replay</text>
+    <text x="72" y="238" fill="#111318" font-size="27" font-weight="620">会话回放与脱敏分享</text>
+    <text x="72" y="288" fill="#61666b" font-size="18">把真实 Agent 轨迹转换成</text>
+    <text x="72" y="318" fill="#61666b" font-size="18">可搜索、可播放、可分享的独立 HTML</text>
+
+    <g transform="translate(72 370)">
+      <rect width="116" height="34" rx="7" fill="#fff" stroke="#d9dde3"/>
+      <circle cx="17" cy="17" r="4" fill="#4176e6"/>
+      <text x="30" y="22" fill="#3d4248" font-size="14" font-weight="560">真实时间线</text>
+      <rect x="126" width="116" height="34" rx="7" fill="#fff" stroke="#d9dde3"/>
+      <circle cx="143" cy="17" r="4" fill="#dd8629"/>
+      <text x="156" y="22" fill="#3d4248" font-size="14" font-weight="560">自动脱敏</text>
+      <rect x="252" width="116" height="34" rx="7" fill="#fff" stroke="#d9dde3"/>
+      <circle cx="269" cy="17" r="4" fill="#2f9e62"/>
+      <text x="282" y="22" fill="#3d4248" font-size="14" font-weight="560">本地优先</text>
+    </g>
+
+    <g transform="translate(72 493)">
+      <path d="M0 0h372" stroke="#d9dde3"/>
+      <text x="0" y="34" fill="#81858c" font-size="15">dsh-plugin · TypeScript · MIT</text>
+      <text x="0" y="65" fill="#4176e6" font-size="15" font-weight="600">github.com/forrestsweet/dsh-agent-replay</text>
+    </g>
+  </g>
+</svg>
