@@ -15,8 +15,6 @@
 
 **回放 Agent 真正做过的事情，再导出一个更适合分享的版本。** Agent Replay 为 DeepSeek Harness 增加原生的 **回放** 标签页，把真实会话中的消息、模型回复、工具调用、命令、错误和耗时转换为可搜索时间线，并可导出为独立 HTML 回放。
 
-没有演示假数据，没有外部埋点，也不会在产品里要求用户去 GitHub 点 Star。
-
 ## 10 秒看懂
 
 | 回放真实会话 | 生成适合分享的脱敏版本 |
@@ -26,8 +24,6 @@
 1. 打开任意非空 Harness 会话，选择 **回放**。
 2. 搜索、筛选、检查事件，或按记录时间播放。
 3. 选择 **生成分享页**，导出一个可交互的 `.html` 文件。
-
-上面的图片来自为本仓库专门创建的真实本地 Harness 会话，不含虚构工具结果或虚构测试结论。
 
 ## 为什么需要它
 
@@ -120,21 +116,7 @@ UI 明确跟随 DeepSeek Harness 的 `ui-trajectory` 与 `ui-primitives`。贡�
 
 当前版本面向 DeepSeek Harness `0.1.0-rc.5+`，并使用 `0.1.0-rc.6` 开发依赖验证。Harness 仍处于 1.0 之前，客户端 slot 或快照契约可能变化。兼容问题请同时提供 Harness 与插件版本。
 
-## 路线图
-
-- [ ] 签名 Release 压缩包与 npm 分发
-- [ ] 用户可配置的脱敏规则
-- [ ] 分享预览中的字段级内容选择
-- [ ] 明暗模式导出视觉基线测试
-- [ ] 后续 Harness 版本兼容矩阵
-
-## 社区与官方发现路径
-
-DeepSeek Harness 当前文档给出的社区插件发现方式是 [`dsh-plugin`](https://github.com/topics/dsh-plugin) GitHub Topic、[GitHub Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions) 和 [Discord 社区](https://discord.gg/Ycq5dCaS4)。本仓库会按这条路径完善；目前官方没有记录单独的插件市场提交流程。
-
 欢迎提交 Issue 和 PR。请先阅读 [CONTRIBUTING.md](CONTRIBUTING.md)，版本记录见 [CHANGELOG.md](CHANGELOG.md)。
-
-如果 Agent Replay 让你的 Harness 会话更容易理解或分享，一个 GitHub Star 能帮助更多 Harness 用户发现它。
 
 ## 许可证
 

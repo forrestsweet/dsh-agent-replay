@@ -30,7 +30,7 @@ dsh web
 2. Add or update tests for privacy and data-selection behavior.
 3. Update both `README.md` and `README.zh-CN.md` when user-facing documentation changes.
 4. Run `pnpm check` and `npm pack --dry-run --ignore-scripts`.
-5. Describe the real evidence you checked; do not use fabricated session data as proof.
+5. Describe how you verified the change.
 
 ## UI principles
 
@@ -39,7 +39,7 @@ Agent Replay is a native Harness surface, not a separate dashboard.
 - Reuse `@deepseek-ai/dsh-client-ui-primitives` before adding custom controls.
 - Use Harness `--dsw-*` semantic tokens and the dimensions/states established by `ui-trajectory`.
 - Support light mode, dark mode, reduced motion, keyboard focus, and narrow windows.
-- Do not add Star prompts, repository links, telemetry, or outbound calls to the plugin UI or exported HTML.
+- Treat telemetry and outbound calls as privacy-sensitive changes requiring explicit review.
 - Public README illustrations must be clearly illustrative; product screenshots must come from real, privacy-safe sessions.
 
 ## Commit and release notes

@@ -1,0 +1,7 @@
+packages:
+  - '.'
+
+# Harness is pre-1.0 and this plugin must test against its fresh RC packages.
+# Keep pnpm's global release-age protection for every other dependency.
+minimumReleaseAgeExclude:
+  - '@deepseek-ai/*'

@@ -15,4 +15,4 @@
 - [ ] No private session data, secrets, or personal paths are included
 - [ ] Export selection/redaction behavior is covered by tests when changed
 - [ ] UI changes reuse official Harness primitives, semantic tokens, and interaction states
-- [ ] No Star prompt, repository link, telemetry, or outbound call was added to the product
+- [ ] Privacy-sensitive network or telemetry behavior is clearly disclosed and reviewed

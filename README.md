@@ -15,8 +15,6 @@ English | [简体中文](README.zh-CN.md)
 
 **Replay what an agent actually did, then export a safer version to share.** Agent Replay adds a native **Replay** tab to DeepSeek Harness. It turns real session messages, model responses, tool calls, commands, errors, and timing into a searchable timeline and a standalone HTML replay.
 
-No demo data. No external telemetry. No GitHub prompt inside the product.
-
 ## See it in 10 seconds
 
 | Replay the real session | Prepare a share-safe export |
@@ -26,8 +24,6 @@ No demo data. No external telemetry. No GitHub prompt inside the product.
 1. Open any non-empty Harness session and select **Replay**.
 2. Search, filter, inspect, or play events with their recorded timing.
 3. Select **Create share page** and export one interactive `.html` file.
-
-The screenshots above come from a real local Harness session created for this repository. They contain no fabricated tool results or test claims.
 
 ## Why this exists
 
@@ -120,21 +116,7 @@ The UI deliberately follows `ui-trajectory` and `ui-primitives` from DeepSeek Ha
 
 The current release targets DeepSeek Harness `0.1.0-rc.5+` and is tested against `0.1.0-rc.6` development packages. Harness is pre-1.0, so client slot or snapshot contracts may change. Open a compatibility issue with both versions when reporting a regression.
 
-## Roadmap
-
-- [ ] Signed release tarballs and npm distribution
-- [ ] User-configurable redaction rules
-- [ ] Share-preview field-level inclusion controls
-- [ ] Export fixture tests across light and dark modes
-- [ ] Compatibility matrix for future Harness releases
-
-## Community and official discovery
-
-DeepSeek Harness currently documents community plugins through the [`dsh-plugin`](https://github.com/topics/dsh-plugin) GitHub topic, [GitHub Discussions](https://github.com/deepseek-ai/deepseek-harness/discussions), and its [Discord community](https://discord.gg/Ycq5dCaS4). This repository is structured for that discovery path; there is no separate official marketplace submission flow documented today.
-
 Issues and pull requests are welcome. Start with [CONTRIBUTING.md](CONTRIBUTING.md), and see [CHANGELOG.md](CHANGELOG.md) for release history.
-
-If Agent Replay makes a Harness session easier to understand or share, a GitHub star helps other Harness users discover it.
 
 ## License
 
